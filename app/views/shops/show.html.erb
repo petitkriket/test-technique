@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @shop.name %></h1>
+
+<ul>
+  <% @shop.products.each do |product| %>
+    <li>
+      <%= product.name %>
+    </li>
+  <% end %>
+</ul>
