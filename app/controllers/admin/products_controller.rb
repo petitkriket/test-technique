@@ -2,25 +2,25 @@ module Admin
   class ProductsController < ApplicationController
     before_action :set_product, only: [:show, :edit, :update, :destroy]
 
-    # GET /products
+    # GET /admin/products
     def index
       @products = Product.all
     end
 
-    # GET /products/1
+    # GET /admin/products/1
     def show
     end
 
-    # GET /products/new
+    # GET /admin/products/new
     def new
       @product = Product.new
     end
 
-    # GET /products/1/edit
+    # GET /admin/products/1/edit
     def edit
     end
 
-    # POST /products
+    # POST /admin/products
     def create
       @product = Product.new(product_params)
 
@@ -31,7 +31,7 @@ module Admin
       end
     end
 
-    # PATCH/PUT /products/1
+    # PATCH/PUT /admin/products/1
     def update
       if @product.update(product_params)
         redirect_to [:admin, @product], notice: 'Product was successfully updated.'
@@ -40,7 +40,7 @@ module Admin
       end
     end
 
-    # DELETE /products/1
+    # DELETE /admin/products/1
     def destroy
       @product.destroy
 

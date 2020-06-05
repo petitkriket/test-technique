@@ -2,25 +2,25 @@ module Admin
   class ShopsController < ApplicationController
     before_action :set_shop, only: [:show, :edit, :update, :destroy]
 
-    # GET /shops
+    # GET /admin/shops
     def index
       @shops = Shop.all
     end
 
-    # GET /shops/1
+    # GET /admin/shops/1
     def show
     end
 
-    # GET /shops/new
+    # GET /admin/shops/new
     def new
       @shop = Shop.new
     end
 
-    # GET /shops/1/edit
+    # GET /admin/shops/1/edit
     def edit
     end
 
-    # POST /shops
+    # POST /admin/shops
     def create
       @shop = Shop.new(shop_params)
 
@@ -31,7 +31,7 @@ module Admin
       end
     end
 
-    # PATCH/PUT /shops/1
+    # PATCH/PUT /admin/shops/1
     def update
       if @shop.update(shop_params)
         redirect_to [:admin, @shop], notice: 'Shop was successfully updated.'
@@ -40,7 +40,7 @@ module Admin
       end
     end
 
-    # DELETE /shops/1
+    # DELETE /admin/shops/1
     def destroy
       @shop.destroy
 
