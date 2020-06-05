@@ -13,11 +13,13 @@ Pour ce test, coté site web, il faut créer le site public :
    - la liste des différentes categories de shop qui existent et ont au moins 1 shop disponible sera suffisante dans le menu
  - avoir une page d'accueil qui liste les commerçants "disponibles"
    - chaque commercant doit avoir une vignette comme sur epicery.com (pas de soucis pour mettre une photo en dur)
+   - un shop est "disponible" si son `available_on` est dans le passé
  - avoir une page par commerçant accessible via `/shops/:slug`
    - chaque page doit lister toutes les categories de produits
    - pour chaque catégorie, lister les produits de ce shop uniquement
    - pour le design, on s'inspirera de https://www.epicery.com/epiceries/boucherie-moderne, mais sans les liens de type "Voir tout"
    - attention, si un shop n'a aucun produit, il faut un message d'explication pour le client plutôt qu'une page blanche
+   - si une catégorie n'a aucun produit, elle ne doit pas être affichée
 
 
  - il n'y a pas besoin de recherche
