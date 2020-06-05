@@ -23,6 +23,7 @@ module Admin
     # POST /admin/products
     def create
       @product = Product.new(product_params)
+      @product.taxon_ids = params[:product][:taxon_ids]
 
       if @product.save
         redirect_to [:admin, @product], notice: 'Product was successfully created.'
@@ -34,6 +35,7 @@ module Admin
     # PATCH/PUT /admin/products/1
     def update
       if @product.update(product_params)
+        @product.taxon_ids = params[:product][:taxon_ids]
         redirect_to [:admin, @product], notice: 'Product was successfully updated.'
       else
         render :edit

@@ -23,6 +23,7 @@ module Admin
     # POST /admin/shops
     def create
       @shop = Shop.new(shop_params)
+      @shop.taxon_ids = params[:shop][:taxon_ids]
 
       if @shop.save
         redirect_to [:admin, @shop], notice: 'Shop was successfully created.'
@@ -34,6 +35,7 @@ module Admin
     # PATCH/PUT /admin/shops/1
     def update
       if @shop.update(shop_params)
+        @shop.taxon_ids = params[:shop][:taxon_ids]
         redirect_to [:admin, @shop], notice: 'Shop was successfully updated.'
       else
         render :edit

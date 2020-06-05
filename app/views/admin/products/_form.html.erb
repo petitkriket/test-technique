@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :description %>
-    <%= form.text_field :description %>
+    <%= form.text_area :description %>
   </div>
 
   <div class="field">
@@ -29,6 +29,11 @@
   <div class="field">
     <%= form.label :shop %>
     <%= form.collection_select(:shop_id, Shop.all, :id, :name, prompt: true) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :taxons %>
+    <%= form.collection_select(:taxon_ids, Taxon.all, :id, :name, {}, multiple: true) %>
   </div>
 
   <div class="actions">

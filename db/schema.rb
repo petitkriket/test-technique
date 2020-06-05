@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_14_163705) do
+ActiveRecord::Schema.define(version: 2020_06_05_133724) do
 
   create_table "products", force: :cascade do |t|
     t.string "name"
@@ -22,10 +22,30 @@ ActiveRecord::Schema.define(version: 2020_05_14_163705) do
     t.index ["shop_id"], name: "index_products_on_shop_id"
   end
 
+  create_table "products_taxons", force: :cascade do |t|
+    t.integer "product_id"
+    t.integer "taxon_id"
+    t.index ["product_id"], name: "index_products_taxons_on_product_id"
+    t.index ["taxon_id"], name: "index_products_taxons_on_taxon_id"
+  end
+
   create_table "shops", force: :cascade do |t|
     t.string "name"
     t.string "slug"
     t.datetime "available_on"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "shops_taxons", force: :cascade do |t|
+    t.integer "shop_id"
+    t.integer "taxon_id"
+    t.index ["shop_id"], name: "index_shops_taxons_on_shop_id"
+    t.index ["taxon_id"], name: "index_shops_taxons_on_taxon_id"
+  end
+
+  create_table "taxons", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

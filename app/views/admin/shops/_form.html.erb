@@ -26,6 +26,11 @@
     <%= form.datetime_select :available_on %>
   </div>
 
+  <div class="field">
+    <%= form.label :taxons %>
+    <%= form.select :taxon_ids, options_from_collection_for_select(Taxon.all, :id, :name), {}, multiple: true %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

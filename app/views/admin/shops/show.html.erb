@@ -1,18 +1,20 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Name:</strong>
   <%= @shop.name %>
 </p>
 
 <p>
-  <strong>Slug:</strong>
-  <%= @shop.slug %>
+  <strong>Available on:</strong>
+  <%= @shop.available_on %>
 </p>
 
 <p>
-  <strong>Available on:</strong>
-  <%= @shop.available_on %>
+  <strong>Taxons:</strong>
+  <ul>
+    <% @shop.taxons.each do |taxon| -%>
+      <%= tag.li taxon.name %>
+    <% end -%>
+  </ul>
 </p>
 
 <%= link_to 'Edit', edit_admin_shop_path(@shop) %> |
