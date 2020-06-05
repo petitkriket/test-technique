@@ -23,8 +23,7 @@ Pour ce test, coté site web, il faut créer le site public :
  - il n'y a pas besoin de recherche
  - il n'y a pas besoin de gestion du panier
  - des tests automatiques seraient un plus
+   - j'ai volontairement supprimé le repertoire `test` créé par `rails new` pour laisser toute liberté dans le choix du framework de test
 
 ### N.B.
-J'ai volontairement supprimé le repertoire créé par `rails new` pour laisser toute liberté là dessus.
-
 L'idée n'est pas de passer 3 jours à faire ce test mais quelques heures. Ceci étant dit, libre à toi d'y passer plus ou moins de temps en fonction de ce que tu veux finir ou faire en plus !
