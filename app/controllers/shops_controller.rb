@@ -21,7 +21,9 @@ class ShopsController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_shop
     @shop = Shop.find_by(slug: params[:slug])
-    # group products by shop taxons instead of filtering the view..
+
+    # Note : pas pu/su faire une aggregation entre les produits et les categories
+    # Du coup, filtré dans la view, a defaut de mieux..
   end
 
   # Only allow a list of trusted parameters through.
