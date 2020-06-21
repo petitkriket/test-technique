@@ -6,7 +6,7 @@ class ShopsController < ApplicationController
 
   # GET /shops
   def index
-    @shops = Shop.all
+    @shops = Shop.all.available_for_order
   end
 
   def available_categories

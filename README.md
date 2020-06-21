@@ -16,9 +16,9 @@ Pour ce test, coté site web, il faut créer le site public :
 
 2.
 
-- [ ] avoir une page d'accueil qui liste les commerçants "disponibles"
-  - [ ] chaque commercant doit avoir une vignette comme sur epicery.com (pas de soucis pour mettre une photo en dur)
-  - [ ] un shop est "disponible" si son `available_on` est dans le passé
+- [x] avoir une page d'accueil qui liste les commerçants "disponibles"
+  - [x] chaque commercant doit avoir une vignette comme sur epicery.com (pas de soucis pour mettre une photo en dur)
+  - [x] un shop est "disponible" si son `available_on` est dans le passé
 
 3.
 
