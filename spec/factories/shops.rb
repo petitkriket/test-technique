@@ -5,7 +5,12 @@ FactoryBot.define do
     name { Faker::Restaurant.name }
     slug { name.parameterize }
     available_on { Faker::Time.backward(days: 14, period: :evening) }
-    photo_url { Faker::LoremFlickr.image(size: '450x300', search_terms: [name]) }
+    photo_url do
+      Faker::Placeholdit.image(size: '450x300',
+                               format: 'jpg',
+                               background_color: 'CCCCCC', text_color: 'F1F1F1',
+                               text: CGI.escape(name))
+    end
     created_at { Faker::Time.between(from: 32.weeks.ago, to: available_on) }
     updated_at { Time.now }
 
