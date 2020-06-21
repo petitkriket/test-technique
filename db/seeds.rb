@@ -1,5 +1,13 @@
 # frozen_string_literal: true
 
+empty_shop = FactoryBot.build(:shop, name: 'The Awful Bakery')
+empty_shop.save!
+puts "Created a shop with no products called #{empty_shop.name}"
+
+empty_taxon = FactoryBot.build(:taxon)
+empty_taxon.save!
+puts "Created a taxon with no products called #{empty_taxon.name}"
+
 5.times do
   FactoryBot.create(:taxon)
 end

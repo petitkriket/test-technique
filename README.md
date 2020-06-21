@@ -27,8 +27,8 @@ Pour ce test, coté site web, il faut créer le site public :
   - [x] chaque page doit lister toutes les categories de produits
   - [x] pour chaque catégorie, lister les produits de ce shop uniquement (NOTE : filtre dans la vue, horrible...)
   - [ ] pour le design, on s'inspirera de https://www.epicery.com/epiceries/boucherie-moderne, mais sans les liens de type "Voir tout"
-  - [ ] attention, si un shop n'a aucun produit, il faut un message d'explication pour le client plutôt qu'une page blanche
-  - [ ] si une catégorie n'a aucun produit, elle ne doit pas être affichée
+  - [x] attention, si un shop n'a aucun produit, il faut un message d'explication pour le client plutôt qu'une page blanche
+  - [x] si une catégorie n'a aucun produit, elle ne doit pas être affichée
 
 ### N.B.
 
