@@ -11,8 +11,8 @@ Pour ce test, coté site web, il faut créer le site public :
 
 1.
 
-- [ ] mettre en place un layout afin d'avoir un menu identique sur toutes les pages
-  - [ ] la liste des différentes categories de shop qui existent et ont au moins 1 shop disponible sera suffisante dans le menu
+- [x] mettre en place un layout afin d'avoir un menu identique sur toutes les pages
+  - [x] la liste des différentes categories de shop qui existent et ont au moins 1 shop disponible sera suffisante dans le menu
 
 2.
 
@@ -22,7 +22,7 @@ Pour ce test, coté site web, il faut créer le site public :
 
 3.
 
-- [ ] avoir une page par commerçant accessible via `/shops/:slug`
+- [x] avoir une page par commerçant accessible via `/shops/:slug`
   - [ ] chaque page doit lister toutes les categories de produits
   - [ ] pour chaque catégorie, lister les produits de ce shop uniquement
   - [ ] pour le design, on s'inspirera de https://www.epicery.com/epiceries/boucherie-moderne, mais sans les liens de type "Voir tout"

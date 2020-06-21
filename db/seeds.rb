@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-15.times do
+5.times do
   FactoryBot.create(:taxon)
 end
 puts 'Created 5 taxonomies'
@@ -16,11 +16,11 @@ end
 puts 'Created 5 unavailable shops and their products'
 
 Shop.all.each do |shop|
-  shop.taxons << Taxon.order('RANDOM()').limit(5)
+  shop.taxons << Taxon.order('RANDOM()').limit(2)
 end
-puts 'Assigned a taxonomy to all shops'
+puts 'Assigned two taxonomies to all shops'
 
 Product.all.each do |product|
-  product.taxons << Taxon.order('RANDOM()').limit(5)
+  product.taxons << Taxon.order('RANDOM()').limit(2)
 end
-puts 'Assigned a taxonomy to all products'
+puts 'Assigned a taxonomies to all products'

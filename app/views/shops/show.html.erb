@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Name:</strong>
+  <%= @shop.name %>
+</p>
+
+<p>
+  <strong>Available on:</strong>
+  <%= @shop.available_on %>
+</p>
+
+<p>
+  <strong>Taxons:</strong>
+  <ul>
+    <% @shop.taxons.each do |taxon| -%>
+      <%= tag.li taxon.name %>
+    <% end -%>
+  </ul>
+</p>
+<%= link_to 'Back', shops_path %>
