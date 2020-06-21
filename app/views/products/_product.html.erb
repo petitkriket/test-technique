@@ -1,16 +1,17 @@
-
+<div class="product-item">
   <div>
     <h5><%= product.name %></h5>
   </div>
   
   <div>
-      <% if product.photo_url %>
-        <%= image_tag(product.photo_url, height: 64, width: 64) %>
-      <% else %>
-        <%= image_tag('https://via.placeholder.com/430x300.png') %>
-      <% end %>
-</div>
+    <% if product.photo_url %>
+      <%= image_tag(product.photo_url, height: 64, width: 64) %>
+    <% else %>
+      <%= image_tag('https://via.placeholder.com/430x300.png') %>
+    <% end %>
+  </div>
 
   <div>
-    <span><%= product.description %></span>
+    <span><%= product.price %></span>
   </div>
+</div>

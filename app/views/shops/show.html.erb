@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<%= link_to 'Retour', shops_path %>
 <p>
   <strong>Name:</strong>
   <%= @shop.name %>
@@ -15,12 +15,13 @@
   <ul>
     <% @shop.taxons.each do |taxon| -%>
       <h1><%= tag.li taxon.name %></h1>
-      <% @shop.products.each do |product| -%>
-          <% if product.taxons.ids.include?(taxon.id) -%>
-            <%= render product %>
+        <div class="product-list">
+          <% @shop.products.each do |product| -%>
+              <% if product.taxons.ids.include?(taxon.id) -%>
+                <%= render product %>
+              <% end -%>
           <% end -%>
-      <% end -%>
+        </div>
     <% end -%>
   </ul>
 </p>
-<%= link_to 'Back', shops_path %>
