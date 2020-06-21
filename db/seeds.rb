@@ -1,7 +1,26 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# frozen_string_literal: true
+
+15.times do
+  FactoryBot.create(:taxon)
+end
+puts 'Created 5 taxonomies'
+
+15.times do
+  FactoryBot.create(:shop)
+end
+puts 'Created 15 active shops and their products'
+
+5.times do
+  FactoryBot.create(:shop, :unavailable)
+end
+puts 'Created 5 unavailable shops and their products'
+
+Shop.all.each do |shop|
+  shop.taxons << Taxon.order('RANDOM()').limit(5)
+end
+puts 'Assigned a taxonomy to all shops'
+
+Product.all.each do |product|
+  product.taxons << Taxon.order('RANDOM()').limit(5)
+end
+puts 'Assigned a taxonomy to all products'
